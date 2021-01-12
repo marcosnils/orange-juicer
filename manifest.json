@@ -3,10 +3,7 @@
   "version": "0.1",
   "description": "Allows collapsing and expading threads in the orange site",
   "manifest_version": 2,
-  "permissions": [
-    "chrome://favicon/"
-  ],
-  "content_security_policy": "script-src 'self'; object-src 'self'; img-src chrome://favicon/;",
+  "content_security_policy": "script-src 'self'; object-src 'self';",
   "content_scripts": [
     {
       "matches": ["https://news.ycombinator.com/item*"],
