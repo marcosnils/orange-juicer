@@ -1,0 +1,23 @@
+{
+  "name": "Orange Juicer",
+  "version": "0.1",
+  "description": "Allows collapsing and expading threads in the orange site",
+  "manifest_version": 2,
+  "permissions": [
+    "chrome://favicon/"
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'; img-src chrome://favicon/;",
+  "content_scripts": [
+    {
+      "matches": ["https://news.ycombinator.com/item*"],
+      "js": ["core.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "icons": {
+    "128": "juicer_128.png",
+    "64": "juicer_64.png",
+    "32": "juicer_32.png"
+  }
+}
