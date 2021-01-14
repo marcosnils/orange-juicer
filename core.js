@@ -56,3 +56,9 @@ for (chead of commHeads) {
   });
   chead.appendChild(childExpandToggle);
 }
+
+chrome.storage.sync.get(['toggleValue'], function(items) {
+  if (items.toggleValue == true) {
+    colexpButton.click()
+  }
+});

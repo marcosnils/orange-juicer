@@ -4,6 +4,12 @@
   "description": "Allows collapsing and expading threads in the orange site",
   "manifest_version": 2,
   "content_security_policy": "script-src 'self'; object-src 'self';",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage"
+  ],
   "content_scripts": [
     {
       "matches": ["https://news.ycombinator.com/item*"],

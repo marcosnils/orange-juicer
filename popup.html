@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Orange Juicer</title>
+    </head>
+    <style type="text/css">
+        body {
+            margin: 5px;
+            }
+        h1 {
+            font-size: 15px;
+            text-align: center;
+            background: #ff6600;
+            color: #fff;
+            padding: 5px 25px;
+            white-space: nowrap
+            }
+        h2 {
+            font-size: 13px;
+            display: inline-block;
+            color: black;
+            padding-right: 5px; 
+            }
+        .switch {
+            position: relative;
+            display: inline-block;
+            margin: 0 auto;
+            width: 30px;
+            height: 17px;
+            }
+        .switch input { 
+            opacity: 0;
+            width: 0;
+            height: 0;
+            }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+            }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 13px;
+            width: 13px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+            }
+        input:checked + .slider {
+            background-color: #ff6600;
+            }
+        input:focus + .slider {
+            box-shadow: 0 0 1px #ff6600;
+            }
+        input:checked + .slider:before {
+            -webkit-transform: translateX(13px);
+            -ms-transform: translateX(13px);
+            transform: translateX(13px);
+            }
+        .slider.round {
+            border-radius: 17px;
+            }
+        .slider.round:before {
+            border-radius: 50%;
+            }
+        #center {
+            text-align: center;
+            margin: -10px 5px;
+            }
+    </style>
+    <body>
+        <h1>Orange Juicer</h1>
+        <div id="center">
+            <h2>Auto Collapse</h2>
+            <label class="switch">
+                <input type="checkbox" id="toggle">
+                <span class="slider round"></span>
+            </label> 
+        </div>
+        <script src="popup.js"></script>
+    </body>
+</html>
